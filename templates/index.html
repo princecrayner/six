@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>six</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">six</div>
+
+  <div class="search-box">
+    <input id="searchInput" placeholder="Search">
+    <button onclick="search()">🔍</button>
+  </div>
+
+  <div class="right-actions">
+    <button class="upload-btn" onclick="startUpload()">Upload</button>
+    <div class="profile-icon" onclick="toggleAuth()">👤</div>
+  </div>
+</header>
+
+<!-- AUTH MODAL -->
+<div id="authBox" class="auth-box">
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+</div>
+
+<input type="file" id="fileInput" hidden>
+
+<div id="feed"></div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  background: white;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: red;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.upload-btn {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 8px 12px
+}
+
+.card {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+video {
+  width: 100%;
+  margin-top: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.auth-box {
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: #111;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #333;
+}
+
+.auth-box input {
+  padding: 6px;
+  border: none;
+}
+
+.auth-box button {
+  padding: 6px;
+  border: none;
+  background: red;
+  color: white;
+}
