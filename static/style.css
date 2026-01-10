@@ -69,26 +69,94 @@ button {
   cursor: pointer;
 }
 
+/* ==================================
+   LOGIN MODAL – ISOLATED STYLES ONLY
+   ================================== */
+
+/* modal overlay */
 .auth-box {
   position: fixed;
-  top: 60px;
-  right: 10px;
-  background: #111;
-  padding: 10px;
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  border: 1px solid #333;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.auth-box input {
-  padding: 6px;
-  border: none;
+/* gradient background wrapper */
+.auth-box .content {
+  width: 400px;
+  background: linear-gradient(135deg, #0a2862, #0f4c81, #1b6ca8);
+  border-radius: 16px;
+  padding: 35px;
 }
 
-.auth-box button {
-  padding: 6px;
+/* glass card */
+.auth-box .content-inner {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 30px;
+  color: #fff;
+}
+
+/* title */
+.auth-box h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+
+/* input box */
+.auth-box .input-box {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.auth-box .input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  padding: 0 20px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.auth-box .input-box input::placeholder {
+  color: #fff;
+}
+
+/* login button */
+.auth-box .btnn {
+  width: 100%;
+  height: 45px;
+  border-radius: 30px;
+  background: #fff;
+  color: #0a2862;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
-  background: red;
-  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* register text */
+.auth-box .register-link {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-box .register-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-box .register-link a:hover {
+  text-decoration: underline;
 }
