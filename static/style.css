@@ -71,7 +71,7 @@ button {
 
 /* ==================================
    LOGIN MODAL – ISOLATED STYLES ONLY
-   ================================== */
+================================== */
 
 /* modal overlay */
 .auth-box {
@@ -88,8 +88,8 @@ button {
 .auth-box .content {
   width: 400px;
   background: linear-gradient(135deg, #0a2862, #0f4c81, #1b6ca8);
-  border-radius: 16px;
-  padding: 35px;
+  border-radius: 18px;
+  padding: 40px;
 }
 
 /* glass card */
@@ -100,34 +100,69 @@ button {
   border-radius: 14px;
   padding: 30px;
   color: #fff;
+  text-align: center;
 }
 
 /* title */
 .auth-box h2 {
-  text-align: center;
   font-size: 34px;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 /* input box */
 .auth-box .input-box {
+  margin-bottom: 15px;
   position: relative;
-  margin-bottom: 22px;
 }
 
 .auth-box .input-box input {
   width: 100%;
-  height: 50px;
+  height: 45px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.35);
   border-radius: 30px;
   padding: 0 20px;
   font-size: 15px;
   color: #fff;
+  box-sizing: border-box;
 }
 
+/* placeholder */
 .auth-box .input-box input::placeholder {
   color: #fff;
+}
+
+/* ===== FORGOT PASSWORD ===== */
+.content .forgot-password {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -16px 0 16px;
+  font-size: 14px;
+}
+
+.content .forgot-password a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content .forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* remember me */
+.auth-box .remember {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.auth-box .remember label input {
+  margin-right: 6px;
+  accent-color: #fff;
 }
 
 /* login button */
@@ -135,16 +170,16 @@ button {
   width: 100%;
   height: 45px;
   border-radius: 30px;
+  border: none;
   background: #fff;
   color: #0a2862;
   font-size: 16px;
   font-weight: 600;
-  border: none;
   cursor: pointer;
   margin-top: 10px;
 }
 
-/* register text */
+/* register link */
 .auth-box .register-link {
   margin-top: 18px;
   text-align: center;
