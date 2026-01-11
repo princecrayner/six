@@ -133,24 +133,6 @@ button {
   color: #fff;
 }
 
-/* ===== FORGOT PASSWORD ===== */
-.content .forgot-password {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: -16px 0 16px;
-  font-size: 14px;
-}
-
-.content .forgot-password a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content .forgot-password a:hover {
-  text-decoration: underline;
-}
-
 /* remember me */
 .auth-box .remember {
   display: flex;
@@ -163,6 +145,24 @@ button {
 .auth-box .remember label input {
   margin-right: 6px;
   accent-color: #fff;
+}
+
+/* forgot password */
+.auth-box .forgot-password {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -16px 0 16px;
+  font-size: 14px;
+}
+
+.auth-box .forgot-password a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.auth-box .forgot-password a:hover {
+  text-decoration: underline;
 }
 
 /* login button */
