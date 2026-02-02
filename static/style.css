@@ -29,6 +29,7 @@ body {
   padding: 8px;
   border: none;
   outline: none;
+  border-radius: 15px;
 }
 
 .search-box button {
@@ -36,6 +37,7 @@ body {
   border: none;
   background: #111;
   color: white;
+  border-radius: 0px 100px 100px 100px; 
 }
 
 .upload-btn {
@@ -57,7 +59,14 @@ video {
 
 button {
   cursor: pointer;
+  border-radius: 15px;
 }
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
 .right-actions {
   display: flex;
   align-items: center;
@@ -67,6 +76,8 @@ button {
 .profile-icon {
   font-size: 22px;
   cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* ==================================
@@ -152,7 +163,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: -16px 0 16px;
   font-size: 14px;
 }
 
@@ -194,4 +204,34 @@ button {
 
 .auth-box .register-link a:hover {
   text-decoration: underline;
+}
+
+/* Footer fixed at bottom like TikTok */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #0a2862;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.footer button {
+  color: white;
+  background-color: blue;
+  border: solid 2px white;
+  border-radius: 15px;
+  padding: 5px;
+  width: 50px;
+}
+
+.footer button:hover {
+  background-color: white;
+  color: black;
 }
