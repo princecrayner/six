@@ -97,7 +97,7 @@ button:hover {
 
 /* gradient background wrapper */
 .auth-box .content {
-  width: 400px;
+  width: 300px;
   background: linear-gradient(135deg, #0a2862, #0f4c81, #1b6ca8);
   border-radius: 18px;
   padding: 40px;
