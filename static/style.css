@@ -159,21 +159,23 @@ button:hover {
 }
 
 /* forgot password */
-.auth-box .forgot-password {
+.auth-box .forgot {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-size: 14px;
+  margin-left: 35px;
 }
 
-.auth-box .forgot-password a {
+.auth-box .forgot a {
   color: #fff;
   text-decoration: none;
 }
 
-.auth-box .forgot-password a:hover {
+.auth-box .forgot a:hover {
   text-decoration: underline;
 }
+
 
 /* login button */
 .auth-box .btnn {
@@ -251,6 +253,7 @@ button:hover {
   color: black;
   border-radius: 100px;
   width: 27px;
+  height: 27px;
 }
 
 .close-btn:hover {
