@@ -236,33 +236,17 @@ button:hover {
   color: black;
 }
 
-/* Make login container reference point */
 .auth-box .content {
   position: relative;
 }
 
-/* Close button inside login box */
-.auth-box .close-btn {
+.close-btn {
   position: absolute;
   top: 15px;
   right: 18px;
   font-size: 20px;
   cursor: pointer;
+  background: none;
+  border: none;
   color: #fff;
-  transition: 0.2s ease;
-}
-
-.auth-box .close-btn:hover {
-  transform: scale(1.2);
-  opacity: 0.7;
-}
-
-.auth-box .close-btn {
-  background: rgba(255,255,255,0.15);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
