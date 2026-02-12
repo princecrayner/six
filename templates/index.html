@@ -26,6 +26,9 @@
 
   <div class="content">
     <form onsubmit="login(); return false;">
+
+      <span class="close-btn" onclick="closeAuth()">✕</span>
+
       <h2>Login</h2>
 
       <div class="input-box">
@@ -44,7 +47,7 @@
       </div>
 
       <button type="submit" class="btnn">Login</button>
-
+      
       <div class="register-link">
       <p>Don’t have an account?
       <a href="#" onclick="register()">Register</a>

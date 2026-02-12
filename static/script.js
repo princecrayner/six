@@ -110,6 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+    function closeAuth() {
+  const authBox = document.getElementById("authBox");
+  authBox.style.display = "none";
+}
+
   /* ---------- LIKE ---------- */
   window.like = async function (id) {
     let r = await fetch("/like/" + id, { method: "POST" });
