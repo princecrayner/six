@@ -246,7 +246,14 @@ button:hover {
   right: 18px;
   font-size: 20px;
   cursor: pointer;
-  background: none;
+  background: white;
   border: none;
-  color: #fff;
+  color: black;
+  border-radius: 100px;
+  width: 27px;
+}
+
+.close-btn:hover {
+  background-color: blue;
+  color: white;
 }
