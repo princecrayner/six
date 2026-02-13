@@ -110,10 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-    function closeAuth() {
-  const authBox = document.getElementById("authBox");
+    window.closeAuth = function () {
   authBox.style.display = "none";
-}
+};
+
 
   /* ---------- LIKE ---------- */
   window.like = async function (id) {
