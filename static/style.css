@@ -32,8 +32,6 @@
 }
 
 
-
-
 body {
   margin: 0;
   background: white;
@@ -244,35 +242,32 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Footer fixed at bottom like TikTok */
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
-  height: 45px;
-  background: #0a2862;
-  color: white;
+  background:  #0a2862;
   display: flex;
   justify-content: space-around;
+  padding: 10px 0;
+  margin-left: 0px;
+}
+ 
+.nav-item {
+  display: flex;
+  flex-direction: column;   /* ICON ABOVE TEXT */
   align-items: center;
-  font-size: 18px;
-  z-index: 100;
-}
-
-.footer button {
   color: white;
-  background-color: blue;
-  border: solid 2px white;
-  border-radius: 15px;
-  padding: 5px;
-  width: 50px;
+  font-size: 12px;
+  cursor: pointer;
+}
+ 
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
 }
 
-.footer button:hover {
-  background-color: white;
-  color: black;
-}
 
 .auth-box .content {
   position: relative;
