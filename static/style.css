@@ -1,3 +1,49 @@
+.settings-page .close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;   /* inside panel, top-left corner */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Settings panel container */
+.settings-page {
+  position: fixed;       /* stay on top of main page */
+  top: 0;
+  right: 0;              /* slide in from right */
+  height: 100vh;         /* full height */
+  width: 55%;            /* covers ~55% of screen */
+  max-width: 400px;      /* optional max width */
+  background-color: #0a0f2c;  /* dark blue-black */
+  color: white;
+  padding: 40px 20px;
+  text-align: right;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* shadow for depth */
+  overflow-y: auto;      /* scroll if content overflows */
+  z-index: 9999;
+}
+
+.settings-page h2 {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.setting-item {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.setting-item:hover {
+  background: rgba(255,255,255,0.15);
+}
+
 .addButton {
   color: white;
 }

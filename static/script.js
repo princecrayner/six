@@ -157,3 +157,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   load();
 });
+
+/* Visit settings page */
+function goToSettingsPage() {
+  window.location.href = "/settings";
+}
+
+/* Close slide panel */
+function closeSettings() {
+  document.querySelector(".settings-page")
+    .classList.remove("active");
+}

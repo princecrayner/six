@@ -110,6 +110,10 @@ def delete(i):
             con.execute("DELETE FROM videos WHERE id=?",(i,))
     return jsonify(ok=True)
 
+@app.route("/settings")
+def settings():
+    return render_template("settings.html")
+
 # ---------- COMMENTS ----------
 @app.route("/comment/<int:i>", methods=["POST"])
 def comment(i):
