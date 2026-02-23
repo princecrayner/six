@@ -1,3 +1,7 @@
+.addButton {
+  color: white;
+}
+
 .search-box {
   position: relative;
   width: 250px; /* adjust if needed */
