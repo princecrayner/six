@@ -1,5 +1,6 @@
 .menu-icon {
   font-size: 28px;
+  cursor: pointer;
 }
 
 .settings-page .close-btn {
@@ -18,13 +19,13 @@
   position: fixed;       /* stay on top of main page */
   top: 0;
   right: 0;              /* slide in from right */
+  left: 0;
   height: 100vh;         /* full height */
-  width: 55%;            /* covers ~55% of screen */
-  max-width: 400px;      /* optional max width */
+  width: ;            /* covers ~55% of screen */
   background-color: #0a0f2c;  /* dark blue-black */
   color: white;
   padding: 40px 20px;
-  text-align: right;
+  text-align: center;
   box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* shadow for depth */
   overflow-y: auto;      /* scroll if content overflows */
   z-index: 9999;
@@ -32,7 +33,7 @@
 
 .settings-page h2 {
   margin-bottom: 20px;
-  text-align: right;
+  text-align: center;
 }
 
 .setting-item {
@@ -41,7 +42,7 @@
   border-radius: 10px;
   margin-bottom: 10px;
   cursor: pointer;
-  text-align: right;
+  text-align: center;
 }
 
 .setting-item:hover {
