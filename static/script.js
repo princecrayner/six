@@ -163,6 +163,12 @@ function goToSettingsPage() {
   window.location.href = "/settings";
 }
 
+/* Open slide panel */
+function openSettings() {
+  document.querySelector(".settings-page")
+    .classList.add("active");
+}
+
 /* Close slide panel */
 function closeSettings() {
   document.querySelector(".settings-page")
