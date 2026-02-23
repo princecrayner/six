@@ -158,19 +158,10 @@ document.addEventListener("DOMContentLoaded", () => {
   load();
 });
 
-/* Visit settings page */
-function goToSettingsPage() {
+function goToSettings() {
   window.location.href = "/settings";
 }
 
-/* Open slide panel */
-function openSettings() {
-  document.querySelector(".settings-page")
-    .classList.add("active");
-}
-
-/* Close slide panel */
-function closeSettings() {
-  document.querySelector(".settings-page")
-    .classList.remove("active");
+function closeBtn() {
+  window.location.href = "/templates/index";
 }
