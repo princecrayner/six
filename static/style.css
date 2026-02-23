@@ -262,9 +262,10 @@ button:hover {
   cursor: pointer;
 }
 
-.nav-item {
-  transition: 0.2s ease;
-  padding: 6px 10px;
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 50px 50px 50px 50px;
 }
  
 .nav-item img {
