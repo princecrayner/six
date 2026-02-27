@@ -3,11 +3,11 @@
   cursor: pointer;
 }
 
-.settings-page .close-btn {
+.settings-page .close-bttn {
   position: absolute;
   top: 15px;
   left: 15px;   /* inside panel, top-left corner */
-  background: none;
+  background: green;
   border: none;
   color: white;
   font-size: 40px;
