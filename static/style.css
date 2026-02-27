@@ -1,3 +1,7 @@
+.nav-item img {
+  filter: brightness(0) invert(1);
+}
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
