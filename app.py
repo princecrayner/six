@@ -1,3 +1,12 @@
+import cloudinary
+import cloudinary.uploader
+
+cloudinary.config(
+  cloud_name="dq155p1ml",
+  api_key="454437591454836",
+  api_secret="GFqA3p4i03h-3QR1vRD509c8B_Y"
+)
+
 from flask import Flask, render_template, request, jsonify, session, send_from_directory
 import sqlite3, os, hashlib
 
@@ -73,9 +82,15 @@ def upload():
     f = request.files["video"]
     title = request.form["title"].replace(" ","_")
     name = f"{title}_{f.filename}"
-    f.save(os.path.join(UPLOAD_FOLDER,name))
+    result = cloudinary.uploader.upload(
+    f,
+    resource_type="video"
+    )
+
+    video_url = result["secure_url"]
     with db() as con:
-        con.execute("INSERT INTO videos(filename,owner) VALUES(?,?)",(name,session["user"]))
+        con.execute("INSERT INTO videos(filename,owner) VALUES(?,?)",
+            (video_url, session["user"]))
     return jsonify(ok=True)
 
 @app.route("/videos")

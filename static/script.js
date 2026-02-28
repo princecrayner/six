@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     videos.forEach(v => {
       feed.innerHTML += `
         <div class="card">
-          <video src="/uploads/${v.file}" controls
+          <video src="${v.file}" controls
             onplay="view(${v.id})"></video>
 
           <p>
