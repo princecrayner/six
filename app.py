@@ -14,7 +14,8 @@ app = Flask(__name__)
 app.secret_key = "six_secret"
 
 UPLOAD_FOLDER = "uploads"
-DB = "database.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB = os.path.join(BASE_DIR, "database.db")
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 def db():
@@ -121,7 +122,6 @@ def delete(i):
     with db() as con:
         v=con.execute("SELECT filename,owner FROM videos WHERE id=?",(i,)).fetchone()
         if v and v[1]==session["user"]:
-            os.remove(os.path.join(UPLOAD_FOLDER,v[0]))
             con.execute("DELETE FROM videos WHERE id=?",(i,))
     return jsonify(ok=True)
 
