@@ -135,13 +135,6 @@ body {
   border-radius: 0px 100px 100px 100px; 
 }
 
-.upload-btn {
-  background: blue;
-  color: white;
-  border: none;
-  padding: 8px 12px
-}
-
 .card {
   padding: 10px;
   border-bottom: 1px solid #333;
@@ -154,16 +147,6 @@ body {
 video {
   width: 100%;
   margin-top: 5px;
-}
-
-button {
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-button:hover {
-  background-color: white;
-  color: black;
 }
 
 .right-actions {

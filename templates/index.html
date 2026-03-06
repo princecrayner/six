@@ -17,8 +17,6 @@
 
 
   <div class="right-actions">
-    <button class="upload-btn" onclick="startUpload()">Upload</button>
-    <div class="profile-icon" onclick="toggleAuth()">👤</div>
     <div class="menu-icon" onclick="goToSettings()">☰</div>
   </div>
 </header>
@@ -73,12 +71,14 @@
     <span>Wave</span>
   </div>
 
-  <div class="nav-item" class="addButton">
+  <div class="nav-item" class="addButton" class="upload-btn" onclick="startUpload()">
     <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/2795.png">
+   <div>
     <span>Add</span>
+   </div>
   </div>
 
-  <div class="nav-item">
+  <div class="nav-item" class="profile-icon" onclick="toggleAuth()">
     <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f464.png">
     <span>Profile</span>
   </div>
