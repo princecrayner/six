@@ -104,7 +104,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: red;
+  background: none;
   padding: 10px;
 }
 
