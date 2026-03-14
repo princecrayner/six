@@ -98,6 +98,7 @@ body {
   background: white;
   color: #fff;
   font-family: sans-serif;
+  padding-top: 60px;
 }
 
 .topbar {
@@ -106,6 +107,7 @@ body {
   justify-content: space-between;
   background: red;
   padding: 10px;
+  position: fixed;
 }
 
 .logo {
