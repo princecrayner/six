@@ -1,5 +1,15 @@
+from pymongo import MongoClient
+
 import cloudinary
 import cloudinary.uploader
+
+
+client = MongoClient("mongodb+srv://princecrayner_db_user:JUNIOR80@cluster0.toxhpdn.mongodb.net/?appName=Cluster0")
+db = client["six_app"]
+
+videos_collection = db["videos"]
+users_collection = db["users"]
+comments_collection = db["comments"]
 
 cloudinary.config(
   cloud_name="dq155p1ml",
@@ -90,17 +100,26 @@ def upload():
 
     video_url = result["secure_url"]
     with db() as con:
-        con.execute("INSERT INTO videos(filename,owner) VALUES(?,?)",
-            (video_url, session["user"]))
+        videos_collection.insert_one({
+    "file": video_url,
+    "owner": session["user"],
+    "likes": 0,
+    "views": 0
+    })
     return jsonify(ok=True)
 
 @app.route("/videos")
 def videos():
     with db() as con:
-        rows = con.execute("SELECT * FROM videos ORDER BY id DESC").fetchall()
+        videos = list(videos_collection.find().sort("_id",-1))
+
     return jsonify([{
-        "id":r[0],"file":r[1],"owner":r[2],"likes":r[3],"views":r[4]
-    } for r in rows])
+    "id": str(v["_id"]),
+    "file": v["file"],
+    "owner": v["owner"],
+    "likes": v["likes"],
+    "views": v["views"]
+    } for v in videos])
 
 @app.route("/like/<int:i>", methods=["POST"])
 def like(i):
