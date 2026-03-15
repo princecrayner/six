@@ -59,22 +59,31 @@ def hash_pw(p): return hashlib.sha256(p.encode()).hexdigest()
 def register():
     u = request.json["username"]
     p = hash_pw(request.json["password"])
-    try:
-        with db() as con:
-            con.execute("INSERT INTO users VALUES(NULL,?,?)",(u,p))
-        return jsonify(ok=True)
-    except:
+
+    if users_collection.find_one({"username": u}):
         return jsonify(ok=False)
+
+    users_collection.insert_one({
+        "username": u,
+        "password": p
+    })
+
+    return jsonify(ok=True)
 
 @app.route("/login", methods=["POST"])
 def login():
     u = request.json["username"]
     p = hash_pw(request.json["password"])
-    with db() as con:
-        r = con.execute("SELECT * FROM users WHERE username=? AND password=?",(u,p)).fetchone()
-    if r:
-        session["user"]=u
+
+    user = users_collection.find_one({
+        "username": u,
+        "password": p
+    })
+
+    if user:
+        session["user"] = u
         return jsonify(ok=True)
+
     return jsonify(ok=False)
 
 @app.route("/logout")
@@ -121,19 +130,25 @@ def videos():
     "views": v["views"]
     } for v in videos])
 
-@app.route("/like/<int:i>", methods=["POST"])
-def like(i):
-    with db() as con:
-        con.execute("UPDATE videos SET likes=likes+1 WHERE id=?",(i,))
-        l=con.execute("SELECT likes FROM videos WHERE id=?",(i,)).fetchone()[0]
-    return jsonify(likes=l)
+@app.route("/like/<id>", methods=["POST"])
+def like(id):
+    videos_collection.update_one(
+        {"_id": ObjectId(id)},
+        {"$inc": {"likes": 1}}
+    )
 
-@app.route("/view/<int:i>", methods=["POST"])
-def view(i):
-    with db() as con:
-        con.execute("UPDATE videos SET views=views+1 WHERE id=?",(i,))
-        v=con.execute("SELECT views FROM videos WHERE id=?",(i,)).fetchone()[0]
-    return jsonify(views=v)
+    v = videos_collection.find_one({"_id": ObjectId(id)})
+    return jsonify(likes=v["likes"])
+
+@app.route("/view/<id>", methods=["POST"])
+def view(id):
+    videos_collection.update_one(
+        {"_id": ObjectId(id)},
+        {"$inc": {"views": 1}}
+    )
+
+    v = videos_collection.find_one({"_id": ObjectId(id)})
+    return jsonify(views=v["views"])
 
 @app.route("/delete/<int:i>", methods=["POST"])
 def delete(i):
