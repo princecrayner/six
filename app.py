@@ -159,9 +159,25 @@ def delete(i):
             con.execute("DELETE FROM videos WHERE id=?",(i,))
     return jsonify(ok=True)
 
-@app.route("/settings")
-def settings():
-    return render_template("settings.html")
+@app.route("/saved")
+def saved():
+    return render_template("saved.html")
+
+
+@app.route("/wave")
+def wave():
+    return render_template("wave.html")
+
+
+@app.route("/earn")
+def earn():
+    return render_template("earn.html")
+
+
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+
 
 # ---------- COMMENTS ----------
 @app.route("/comment/<int:i>", methods=["POST"])

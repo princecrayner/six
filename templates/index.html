@@ -4,22 +4,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>six</title>
 <link rel="stylesheet" href="/static/style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="logo">six</div>
 
-   <div class="search-box">
-    <input id="searchInput" placeholder="Search">
-    <span class="search-icon" onclick="search()">🔍</span>
-   </div>
+<div class="topbar">
+  <p class="six">six</p>
+  <input type="search" placeholder="Search" class="search" onclick="search()">
+  <i class='bx bx-search'></i>
+  <div class="menu-icon" id="menuBtn">☰</div>
+</div>
+
+<!....Sidebar.....>
+<div class="sidebar" id="sidebar">
+  <a href="page1.html">Settings</a>
+  <a href="page2.html">About</a>
+  <a href="page3.html">Contact</a>
+  <a href="page4.html">Logout</a>
+  <p>© 2026 Six App</p>
+</div>
+
+<div class="overlay" id="overlay"></div>
 
 
-  <div class="right-actions">
-    <div class="menu-icon" onclick="goToSettings()">☰</div>
-  </div>
-</header>
 
 <!-- AUTH MODAL -->
 <div id="authBox" class="auth-box">
@@ -60,30 +68,36 @@
 
 </div>
 
-   <footer class="footer">
-  <div class="nav-item">
-    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f3e0.png">
-    <span>Home</span>
-  </div>
 
-  <div class="nav-item">
-    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f514.png">
+
+
+<footer class="footer">
+
+  <a href="{{ url_for('saved') }}" class="nav-item">
+    <i class='bx bx-caret-down-square'></i>
+    <span>Saved</span>
+  </a>
+
+  <a href="{{ url_for('wave') }}" class="nav-item">
+    <i class='bx bx-bell'></i>
     <span>Wave</span>
+  </a>
+
+  <div class="addButton nav-item upload-btn" onclick="startUpload()">
+    <i class='bx bx-plus'></i>
   </div>
 
-  <div class="nav-item" class="addButton" class="upload-btn" onclick="startUpload()">
-    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/2795.png">
-   <div>
-    <span>Add</span>
-   </div>
-  </div>
+  <a href="{{ url_for('earn') }}" class="nav-item">
+    <i class='bx bx-wallet'></i>
+    <span>Earn</span>
+  </a>
 
-  <div class="nav-item" class="profile-icon" onclick="toggleAuth()">
-    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f464.png">
+  <a href="{{ url_for('profile') }}" class="nav-item">
+    <i class='bx bx-user-circle'></i>
     <span>Profile</span>
-  </div>
-</footer>
+  </a>
 
+</footer>
 
 
 <input type="file" id="fileInput" hidden>

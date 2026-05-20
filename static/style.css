@@ -1,98 +1,3 @@
-.nav-item img {
-  filter: brightness(0) invert(1);
-}
-
-.menu-icon {
-  font-size: 28px;
-  cursor: pointer;
-}
-
-.settings-page .close-bttn {
-  position: absolute;
-  top: 15px;
-  left: 15px;   /* inside panel, top-left corner */
-  background: green;
-  border: none;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-/* Settings panel container */
-.settings-page {
-  position: fixed;       /* stay on top of main page */
-  top: 0;
-  right: 0;              /* slide in from right */
-  left: 0;
-  height: 100vh;         /* full height */
-  width: ;            /* covers ~55% of screen */
-  background-color: #0a0f2c;  /* dark blue-black */
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.3); /* shadow for depth */
-  overflow-y: auto;      /* scroll if content overflows */
-  z-index: 9999;
-}
-
-.settings-page h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 40px;
-}
-
-.setting-item {
-  background: rgba(255,255,255,0.08);
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 35px;
-  cursor: pointer;
-  text-align: center;
-  font-size: 25px;
-}
-
-.setting-item:hover {
-  background-color: green;
-}
-
-.addButton {
-  color: white;
-}
-
-.search-box {
-  position: relative;
-  width: 250px; /* adjust if needed */
-}
-
-.search-box input {
-  width: 100%;
-  padding: 10px 40px 10px 15px; /* space for icon */
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background:
-  color: #fff;
-}
-
-.search-box input::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-
-.search-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 18px;
-  opacity: 0.7;
-  transition: 0.2s;
-}
-
-.search-icon:hover {
-  opacity: 1;
-}
-
-
 body {
   margin: 0;
   background: white;
@@ -100,45 +5,130 @@ body {
   font-family: sans-serif;
 }
 
+
+/* TOP BAR */
+
 .topbar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: red;
-  padding: 10px;
-  position: fixed;
+  justify-content: space-around;
+  background-color: blue;
   top: 0;
   right: 0;
   left: 0;
+  height: 55px;
+  position: fixed;
   z-index: 1;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.search-box {
-  display: flex;
-  flex: 1;
-  margin: 0 10px;
-}
-
-.search-box input {
-  flex: 1;
-  padding: 8px;
+.search {
+  position: relative;
+  width: 100%; /* adjust if needed */
+  height: 31px;
+  margin-top: 11px;
+  border-radius: 50px;
+  margin-left: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
   border: none;
   outline: none;
-  border-radius: 15px;
+  padding: 15px 47px 15px 30px;
 }
 
-.search-box button {
-  padding: 8px 12px;
-  border: none;
-  background: #111;
-  color: white;
-  border-radius: 0px 100px 100px 100px; 
+.topbar i {
+  color: blue;
+  position: absolute;
+  right: 20px;
+  top: 35%;
+  transform: translate(-50%);
+  font-size: 15px;
+  margin-right: 38px;
+  cursor: pointer;
 }
+
+.topbar i:hover {
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.search::placeholder {
+  color: blue;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.six {
+  color: white;
+  font-weight: bold;
+  margin-top: 11px;
+  font-size: 25px;
+  margin-left: 7px;
+}
+
+
+/* Hamburger Icon */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  margin-top: 11px;
+  margin-right: 11px;
+  padding-left: 11px;
+}
+ 
+.menu-icon:hover {
+  border-radius: 50px;
+  color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* hidden initially */
+  width: 300px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding-top: 60px;
+  transition: 0.3s;
+  z-index: 3;
+}
+ 
+/* sidebar links */
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sidebar a:hover {
+  background: #575757;
+}
+ 
+/* show sidebar */
+.sidebar.active {
+  left: 0;
+}
+
+/* overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 2;
+}
+
+/* show overlay */
+.overlay.active {
+  display: block;
+}
+
 
 
 .right-actions {
@@ -282,37 +272,64 @@ body {
   text-decoration: underline;
 }
 
-.footer {
+.footer{
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background:  #0a2862;
+  left: 0;
+  right: 0;
+
+  background: black;
+
   display: flex;
   justify-content: space-around;
-  padding: 4px 0;
-  margin-left: 0px;
-  z-index: 1;
-}
- 
-.nav-item {
-  display: flex;
-  flex-direction: column;   /* ICON ABOVE TEXT */
   align-items: center;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
+
+  padding: 8px 0;
+
+  z-index: 1000;
 }
 
-.nav-item:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  border-radius: 50px 50px 50px 50px;
+/* NAV ITEMS */
+
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
 }
- 
-.nav-item img {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 4px;
+
+/* ICONS */
+
+.footer i{
+  font-size: 28px;
+  margin-bottom: 3px;
+}
+
+/* UPLOAD BUTTON */
+
+.addButton {
+  background: blue;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -10px;
+}
+
+/* PLUS ICON */
+
+.addButton i{
+  color: white;
+  font-size: 32px;
 }
 
 
@@ -348,8 +365,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    margin-top: 50px;
+    margin-bottom: 60px;
+
 }
 
 /* VIDEO CARD */
@@ -414,6 +432,7 @@ body {
     color: #555;
 }
 
+ 
 /* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
     .feed {

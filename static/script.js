@@ -158,10 +158,23 @@ document.addEventListener("DOMContentLoaded", () => {
   load();
 });
 
-function goToSettings() {
-  window.location.href = "/settings";
-}
+ //--------MENU------//
 
-function closeBtn() {
-  window.location.href = "/templates/index";
-}
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+
+// Open menu
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+});
+
+
+// close menu when clicking outside
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
