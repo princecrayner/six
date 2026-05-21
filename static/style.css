@@ -1,7 +1,6 @@
 body {
   margin: 0;
   background: white;
-  color: #fff;
   font-family: sans-serif;
 }
 
@@ -17,7 +16,7 @@ body {
   left: 0;
   height: 55px;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .search {
@@ -57,7 +56,7 @@ body {
   text-align: center;
 }
 
-.six {
+.topbar p {
   color: white;
   font-weight: bold;
   margin-top: 11px;
@@ -91,7 +90,7 @@ body {
   color: white;
   padding-top: 60px;
   transition: 0.3s;
-  z-index: 3;
+  z-index: 2000;
 }
  
 /* sidebar links */
@@ -101,6 +100,16 @@ body {
   color: white;
   text-decoration: none;
   text-align: center;
+}
+
+.sidebar p {
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 85px;
 }
 
 .sidebar a:hover {
@@ -121,7 +130,7 @@ body {
   height: 100%;
   background: rgba(0,0,0,0.5);
   display: none;
-  z-index: 2;
+  z-index: 1500;
 }
 
 /* show overlay */
@@ -131,18 +140,32 @@ body {
 
 
 
-.right-actions {
+.subbar {
+  position: fixed;
+  top: 55px; 
+  background: #dcdcdc;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  height: 30px;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
 }
 
-.profile-icon {
-  font-size: 22px;
-  cursor: pointer;
-  background-color: white;
-  border-radius: 5px;
+.sub-btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 7px;
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+  margin-top: 4px;
 }
+
+.sub-btn:hover {
+  background: #e4e4e4;
+}
+
 
 /* ==================================
    LOGIN MODAL – ISOLATED STYLES ONLY
@@ -152,6 +175,7 @@ body {
 .auth-box {
   position: fixed;
   inset: 0;
+  color: white;
   background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
@@ -285,8 +309,8 @@ body {
   align-items: center;
 
   padding: 8px 0;
-
   z-index: 1000;
+
 }
 
 /* NAV ITEMS */
@@ -365,9 +389,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 72px;
     margin-bottom: 60px;
-
 }
 
 /* VIDEO CARD */
