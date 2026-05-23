@@ -316,7 +316,7 @@ body {
   justify-content: space-around;
   align-items: center;
 
-  padding: 11px 0;
+  padding: 14px 0;
   z-index: 1000;
 
 }
@@ -331,8 +331,8 @@ body {
   color: white;
   text-decoration: none;
   font-size: 10px;
-  margin-top: -9px;
-  margin-bottom: 8px
+  margin-top: -11px;
+  margin-bottom: 10px
 }
 
 /* ICONS */
@@ -356,7 +356,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  margin-top: -9px;
+  margin-top: -11px;
 }
 
 /* PLUS ICON */
