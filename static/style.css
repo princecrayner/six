@@ -310,12 +310,13 @@ body {
   right: 0;
 
   background: black;
+  border-top: 1px solid #313030;
 
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  padding: 8px 0;
+  padding: 11px 0;
   z-index: 1000;
 
 }
@@ -330,14 +331,15 @@ body {
   color: white;
   text-decoration: none;
   font-size: 10px;
-  margin-bottom: 5px;
+  margin-top: -9px;
+  margin-bottom: 8px
 }
 
 /* ICONS */
 
 .footer i{
   font-size: 26px;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 /* UPLOAD BUTTON */
@@ -345,8 +347,8 @@ body {
 .addButton {
   background: blue;
 
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 
   border-radius: 50%;
 
@@ -354,7 +356,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  margin-top: -10px;
+  margin-top: -9px;
 }
 
 /* PLUS ICON */
