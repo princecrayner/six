@@ -7,171 +7,67 @@ body {
 
 /* TOP BAR */
 
-.topbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: blue;
-  top: 0;
+.topbar{
   right: 0;
-  left: 0;
-  height: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;  
+  transition: top 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EFEFEF;
+  padding: 10px 20px;
+  height: 30px;
   position: fixed;
   z-index: 1000;
+  border-bottom: 1px solid #dedede;
 }
 
 .search {
-  position: relative;
   width: 100%; /* adjust if needed */
   height: 31px;
-  margin-top: 11px;
   border-radius: 50px;
-  margin-left: 10px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border: none;
+  border: 1px solid #717171;
   outline: none;
-  padding: 15px 47px 15px 30px;
+  padding: 10px 40px 10px 15px;
 }
 
-.topbar i {
-  color: blue;
-  position: absolute;
-  right: 20px;
-  top: 35%;
-  transform: translate(-50%);
-  font-size: 15px;
-  margin-right: 38px;
-  cursor: pointer;
+.search-box{
+    position: relative;
+    width: 300px;
 }
 
-.topbar i:hover {
-  border-radius: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
 
 .search::placeholder {
-  color: blue;
+  color: black;
   font-weight: bold;
-  font-size: 14px;
   text-align: center;
 }
 
 .topbar p {
-  color: white;
+  color: black;
   font-weight: bold;
-  margin-top: 11px;
+  
   font-size: 25px;
-  margin-left: 7px;
+  margin: 0;
 }
 
+.search-box i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+}
 
-/* Hamburger Icon */
-.menu-icon {
+.topbar a {
   font-size: 28px;
-  cursor: pointer;
-  color: white;
-  margin-top: 11px;
-  margin-right: 11px;
-  padding-left: 11px;
-}
- 
-.menu-icon:hover {
-  border-radius: 50px;
-  color: white;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px; /* hidden initially */
-  width: 300px;
-  height: 100%;
-  background: #333;
-  color: white;
-  padding-top: 60px;
-  transition: 0.3s;
-  z-index: 2000;
-}
- 
-/* sidebar links */
-.sidebar a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
-.sidebar p {
-    color: white;
-    position: fixed;
-    bottom: 20px;
-    text-align: center;
-    font-size: 14px;
-    font-style: italic;
-    margin-left: 85px;
-}
-
-.sidebar a:hover {
-  background: #575757;
-}
- 
-/* show sidebar */
-.sidebar.active {
-  left: 0;
-}
-
-/* overlay background */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: none;
-  z-index: 1500;
-}
-
-/* show overlay */
-.overlay.active {
-  display: block;
-}
-
-
-
-.subbar {
-  position: fixed;
-  top: 55px; 
-  background:  #f5f5f5;
-  display: flex;
-  height: 25px;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid #ddd;
-  z-index: 999;
-  justify-content: space-between;
-}
-
-.sub-btn {
-  font-size: 13px;
-  font-weight: ;
-  padding: 2px 7px;
   color: black;
   text-decoration: none;
-  transition: 0.2s;
-  margin-top: 2px;
 }
 
-.subbar i {
-  font-size: ;
-  margin-right: 11px;
-  margin-top: ;
-}
-
-.sub-btn:hover {
-  background: #e4e4e4;
-}
 
 
 /* ==================================
@@ -399,7 +295,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-top: 72px;
+    margin-top: 55px;
     margin-bottom: 60px;
 }
 

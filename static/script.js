@@ -178,3 +178,28 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
+
+
+// TOPBAR SCROLL //
+
+let lastScrollTop = 0;
+const topbar = document.querySelector(".topbar");
+
+window.addEventListener("scroll", function () {
+
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+
+        // scrolling down → hide topbar
+        topbar.style.top = "-80px";
+
+    } else {
+
+        // scrolling up → show topbar
+        topbar.style.top = "0";
+
+    }
+
+    lastScrollTop = scrollTop;
+});

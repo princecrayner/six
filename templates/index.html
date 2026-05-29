@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>six</title>
+<title>virrel</title>
 <link rel="stylesheet" href="/static/style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -10,38 +10,19 @@
 
 
 <div class="topbar">
-  <p class="six">six</p>
-  <input type="search" placeholder="Search" class="search" onclick="search()">
-  <i class='bx bx-search'></i>
-  <div class="menu-icon" id="menuBtn">☰</div>
+
+   <p>virrel</p>
+
+   <div class="search-box">
+      <input type="search" placeholder="Search..." class="search" onclick="search()">
+     <i class="bx bx-search"></i>
+   </div>
+
+   <a href="#">
+      <i class="bx bx-bell"></i>
+   </a>
+
 </div>
-
-
-<div class="subbar">
-  <div class="sub-btn">
-   <a href="{{ url_for('home') }}">Home</a>
-  </div>
-
-  <div class="sub-btn">
-   <a href="#">Shorts</a>
-
-   <i class='bx bx-play-circle'></i>
-  </div>    
-</div>
-
-
-
-<!....Sidebar.....>
-<div class="sidebar" id="sidebar">
-  <a href="page1.html">Settings</a>
-  <a href="page2.html">About</a>
-  <a href="page3.html">Contact</a>
-  <a href="page4.html">Logout</a>
-  <p>© 2026 Six App</p>
-</div>
-
-<div class="overlay" id="overlay"></div>
-
 
 
 <!-- AUTH MODAL -->
@@ -89,13 +70,13 @@
 <footer class="footer">
 
   <a href="{{ url_for('saved') }}" class="nav-item">
-    <i class='bx bx-caret-down-square'></i>
-    <span>Saved</span>
+    <i class="bx bx-home-alt"></i>
+    <span>Home</span>
   </a>
 
   <a href="{{ url_for('wave') }}" class="nav-item">
-    <i class='bx bx-bell'></i>
-    <span>Wave</span>
+    <i class='bx bx-caret-down-square'></i>
+    <span>Saved</span>
   </a>
 
   <div class="addButton nav-item upload-btn" onclick="startUpload()">
